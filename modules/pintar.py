@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 
 def obtener_datos():
     datos = pd.read_csv('metro - Hoja 1.csv')
+    datos['Estacion'] = datos['Estacion'].str.lower()
     return datos
 
 def obtener_linea(df, linea):
@@ -45,4 +46,22 @@ def imprimir_estaciones():
         for estacion in datos[datos['Linea'] == name]['Estacion'].values:
             print("| " + estacion)
 
+def pintar_info(Origen, Destino, tiempo1, tiempo2, minutos):
+    print("\n" + "-"*10)
+    print(f'{tiempo1}-{tiempo2}      {minutos} min')
+    print(f'\n{Origen.title()} > {Destino.title()}')
+    print(f'{tiempo1} {Origen.title()}')
+    print(f'{tiempo2} {Destino.title()}')
+    print("-"*10 + "\n")
+
+def pintar_trayectoria(lista_estaciones):
+    
+    lineas = obtener_datos()
+    for i in range(len(lista_estaciones)):
+        cantidad_transbordes = len(lineas[lineas['Estacion'] == lista_estaciones[i]][['Estacion','Linea']].values)
+        if cantidad_transbordes > 0:
+            transbordes = ", ".join(lineas[lineas['Estacion'] == lista_estaciones[i]]['Linea'].values)
+            print(f'* {lista_estaciones[i].title()}')
+            print(f'| Líneas: {transbordes}')
+            print(f'|')
     
