@@ -1,5 +1,5 @@
 Origen,Destino,Longitud
-Pantitlán,Zaragoza,"1,32"
+Pantitlán,Zaragoza,"1,320"
 Zaragoza,Gómez Farías,762
 Gómez Farías,Boulevard Puerto Aéreo,611
 Boulevard Puerto Aéreo,Balbuena,595
@@ -40,7 +40,7 @@ Villa de Cortés,Nativitas,750
 Nativitas,Portales,924
 Portales,Ermita,748
 Ermita,General Anaya,838
-General Anaya,Tasqueña,"1,33"
+General Anaya,Tasqueña,"1,330"
 Indios Verdes,Deportivo 18 de Marzo,"1,166"
 Deportivo 18 de Marzo,Potrero,966
 Potrero,La Raza,"1,106"
@@ -121,16 +121,16 @@ Aculco,Escuadrón 201,789
 Escuadrón 201,Atlalilco,"1,738"
 Atlalilco,Iztapalapa,732
 Iztapalapa,Cerro de la Estrella,717
-Cerro de la Estrella,UAM I,"1,135"
-UAM I,Constitución de 1917,"1,137"
-Pantitlán,Puebla,"1,38"
+Cerro de la Estrella,UAM-I,"1,135"
+UAM-I,Constitución de 1917,"1,1370"
+Pantitlán,Puebla,"1,380"
 Puebla,Ciudad Deportiva,800
-Ciudad Deportiva,Velódromo,"1,11"
+Ciudad Deportiva,Velódromo,"1,110"
 Velódromo,Mixiuhca,821
 Mixiuhca,Jamaica,942
 Jamaica,Chabacano,"1,031"
-Chabacano,Lázaro Cardenas,1
-Lázaro Cardenas,Centro Médico,"1,059"
+Chabacano,Lázaro Cárdenas,1000
+Lázaro Cárdenas,Centro Médico,"1,059"
 Centro Médico,Chilpancingo,"1,152"
 Chilpancingo,Patriotismo,955
 Patriotismo,Tacubaya,"1,133"
@@ -140,7 +140,7 @@ Canal de San Juan,Tepalcates,"1,456"
 Tepalcates,Guelatao,"1,161"
 Guelatao,Peñón Viejo,"2,206"
 Peñón Viejo,Acatitla,"1,379"
-Acatitla,Santa Marta,"1,1"
+Acatitla,Santa Marta,"1,100"
 Santa Marta,Los Reyes,"1,783"
 Los Reyes,La Paz,"1,956"
 Ciudad Azteca,Plaza Aragón,574
@@ -171,13 +171,13 @@ Olivos,Tezonco,490
 Tezonco,Periférico Oriente,"1,545"
 Periférico Oriente,Calle 11,"1,111"
 Calle 11,Lomas Estrella,906
-Lomas Estrella,San Andrés Tomatlán,"1,06"
+Lomas Estrella,San Andrés Tomatlán,"1,060"
 San Andrés Tomatlán,Culhuacán,990
 Culhuacán,Atlalilco,"1,671"
 Atlalilco,Mexicaltzingo,"1,922"
 Mexicaltzingo,Ermita,"1,805"
 Ermita,Eje Central,895
-Eje Central,Parque de los Venados,"1,28"
+Eje Central,Parque de los Venados,"1,280"
 Parque de los Venados,Zapata,563
 Zapata,Hospital 20 de Noviembre,450
 Hospital 20 de Noviembre,Insurgentes Sur,725

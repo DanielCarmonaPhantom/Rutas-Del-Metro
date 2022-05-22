@@ -1,10 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-def obtener_datos():
-    datos = pd.read_csv('metro - Hoja 1.csv')
-    datos['Estacion'] = datos['Estacion'].str.lower()
-    return datos
+
 
 def obtener_linea(df, linea):
     plt.axis('off')
@@ -13,8 +10,7 @@ def obtener_linea(df, linea):
     color = df[df['Linea'] == linea]['Color'].iloc[0]
     return plt.plot(x, y, color=color, marker='*')
 
-def imprimir_mapa():
-    datos = obtener_datos()
+def imprimir_mapa(datos):
     coordenadas = datos['Coordenadas'].str.split(',', expand=True)
     df_new = pd.concat([datos, coordenadas] , axis=1)
     df_new[0] = df_new[0].astype(float)
@@ -34,9 +30,7 @@ def imprimir_menu():
     print(" D Salir")
 
 
-def imprimir_estaciones():
-    datos = obtener_datos()
-
+def imprimir_estaciones(datos):
     estaciones = datos['Linea'].unique()
 
     for name in estaciones:
@@ -47,21 +41,19 @@ def imprimir_estaciones():
             print("| " + estacion)
 
 def pintar_info(Origen, Destino, tiempo1, tiempo2, minutos):
-    print("\n" + "-"*10)
+    print("\n" + "-"*20)
     print(f'{tiempo1}-{tiempo2}      {minutos} min')
     print(f'\n{Origen.title()} > {Destino.title()}')
     print(f'{tiempo1} {Origen.title()}')
     print(f'{tiempo2} {Destino.title()}')
-    print("-"*10 + "\n")
+    print("-"*20 + "\n")
 
-def pintar_trayectoria(lista_estaciones):
-    
-    lineas = obtener_datos()
+def pintar_trayectoria(lista_estaciones, tiempo_entre_estacion, lineas):
     for i in range(len(lista_estaciones)):
         cantidad_transbordes = len(lineas[lineas['Estacion'] == lista_estaciones[i]][['Estacion','Linea']].values)
         if cantidad_transbordes > 0:
             transbordes = ", ".join(lineas[lineas['Estacion'] == lista_estaciones[i]]['Linea'].values)
-            print(f'* {lista_estaciones[i].title()}')
-            print(f'| Líneas: {transbordes}')
-            print(f'|')
+            print(f'{tiempo_entre_estacion[i]:4} * {lista_estaciones[i].title()}')
+            # print(f'      | Líneas: {transbordes}')
+            print(f'      |')
     
