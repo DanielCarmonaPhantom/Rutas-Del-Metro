@@ -10,7 +10,7 @@
 Para que el proyecto pueda ejecutarse, necesitamos algunas librerías, estas ya estan enlistadas en el archivo requirements. Procederemos a instalarlas con el comando:
 
 ```Bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ## 2. Inicializar aplicación.
